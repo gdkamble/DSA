@@ -1,1 +1,45 @@
 
+Write a program to count and print all the duplicates in the inputstring.
+print all duplicate excluding unique , do not follow insertion order
+i/p :
+String s1 ="abcdabcd";
+o/p :
+4
+abcd
+
+i/p : 
+String s1 = "pabcdabcdpaaaaaaa";
+o/p :
+12
+pabcdaaaaaaa 
+import java.util.HashMap;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcdeefabcd";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		String s2="";
+		int cnt=0;
+		for(int i=0; i<s1.length(); i++)
+		{
+			for(int j=i+1; j<s1.length(); j++)
+			{
+				if(s1.charAt(i)==s1.charAt(j))
+				{
+					cnt++;
+					s2+=s1.charAt(i);
+				}
+			}
+		}
+		System.out.println(cnt);  
+		System.out.println(s2);
+	}
+}
+output :5
+abcde
