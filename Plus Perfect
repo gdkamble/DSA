@@ -1,0 +1,98 @@
+//Given a ‘n’ digit number x, check if it is a plus perfect number or not. A number is plus perfect number if it is equal to the sum of its digits raised to the nth power.
+//Examples : 
+//
+//Input : x  = 371
+//Output : Yes
+//Explanation :  
+//Number of digits n = 3
+//(3*3*3) + (7*7*7) + (1*1*1) = 371
+//
+//Input : x = 9474
+//Output : Yes
+//Explanation : 
+//Number of digits n = 4
+//(9*9*9*9) + (4*4*4*4) + (7*7*7*7) + 
+//(4*4*4*4) = 9474
+//
+//Input : x = 9473
+//Output : No
+//Explanation : 
+//Number of digits n = 4
+//(9*9*9*9) + (4*4*4*4) + (7*7*7*7) +
+//(3*3*3*3) != 9474
+package ArrayDsa;
+
+public class plusPerfect {
+
+	public static void main(String[] args) {
+		int x = 9473;
+		
+	
+		int originalNumber=x;
+		int cnt=0;
+		while(x!=0)
+		{
+			x=x/10;
+			cnt++;
+		}
+		System.out.println(cnt);
+		x=originalNumber;
+		int sum=0;
+		while(x!=0)
+		{
+			int digit=x%10;
+			sum+=Math.pow(digit, cnt);
+			x=x/10;
+		}
+		System.out.println(sum);
+		if(sum==originalNumber)
+		{
+			System.out.println("yes");
+		}
+		else
+		{
+			System.out.println("no");
+		}
+		
+
+	}
+
+}
+package ArrayDsa;
+
+public class plusPerfect {
+
+	public static void main(String[] args) {
+		int x = 9473;
+		
+	
+		int originalNumber=x;
+		int cnt=0;
+		while(x!=0)
+		{
+			x=x/10;
+			cnt++;
+		}
+		System.out.println(cnt);
+		x=originalNumber;
+		int sum=0;
+		while(x!=0)
+		{
+			int digit=x%10;
+			sum+=Math.pow(digit, cnt);
+			x=x/10;
+		}
+		System.out.println(sum);
+		if(sum==originalNumber)
+		{
+			System.out.println("yes");
+		}
+		else
+		{
+			System.out.println("no");
+		}
+		
+
+	}
+
+}
