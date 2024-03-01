@@ -1,0 +1,27 @@
+package ArrayDsa;
+
+public class subArrayPrint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {1,2,3,4};
+		int n=a.length;
+		
+		for(int si=0; si<n; si++)
+		{
+			for(int ei=si;ei<n; ei++ )
+			{
+				for(int k=si; k<=ei; k++)
+				{
+					System.out.print(a[k]+" ");
+				}
+				System.out.println();
+				
+			}
+			
+		}
+		
+
+	}
+
+}
